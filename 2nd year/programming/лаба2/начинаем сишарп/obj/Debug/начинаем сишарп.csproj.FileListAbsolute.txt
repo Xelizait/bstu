@@ -1,0 +1,7 @@
+C:\Users\Денис\source\repos\начинаем сишарп\начинаем сишарп\bin\Debug\начинаем сишарп.exe.config
+C:\Users\Денис\source\repos\начинаем сишарп\начинаем сишарп\bin\Debug\начинаем сишарп.exe
+C:\Users\Денис\source\repos\начинаем сишарп\начинаем сишарп\bin\Debug\начинаем сишарп.pdb
+C:\Users\Денис\source\repos\начинаем сишарп\начинаем сишарп\obj\Debug\начинаем сишарп.csprojAssemblyReference.cache
+C:\Users\Денис\source\repos\начинаем сишарп\начинаем сишарп\obj\Debug\начинаем сишарп.csproj.CoreCompileInputs.cache
+C:\Users\Денис\source\repos\начинаем сишарп\начинаем сишарп\obj\Debug\начинаем сишарп.exe
+C:\Users\Денис\source\repos\начинаем сишарп\начинаем сишарп\obj\Debug\начинаем сишарп.pdb

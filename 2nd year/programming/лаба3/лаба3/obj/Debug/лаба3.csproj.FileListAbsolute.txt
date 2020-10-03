@@ -1,0 +1,7 @@
+C:\Users\Денис\source\repos\лаба3\лаба3\bin\Debug\лаба3.exe.config
+C:\Users\Денис\source\repos\лаба3\лаба3\bin\Debug\лаба3.exe
+C:\Users\Денис\source\repos\лаба3\лаба3\bin\Debug\лаба3.pdb
+C:\Users\Денис\source\repos\лаба3\лаба3\obj\Debug\лаба3.csprojAssemblyReference.cache
+C:\Users\Денис\source\repos\лаба3\лаба3\obj\Debug\лаба3.csproj.CoreCompileInputs.cache
+C:\Users\Денис\source\repos\лаба3\лаба3\obj\Debug\лаба3.exe
+C:\Users\Денис\source\repos\лаба3\лаба3\obj\Debug\лаба3.pdb

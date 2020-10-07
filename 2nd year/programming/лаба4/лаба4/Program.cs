@@ -43,7 +43,7 @@ namespace лаб4
 
             Console.WriteLine("--------------------------------------------------------------------------------------");
 
- int check;
+            int check;
             Console.WriteLine("Введите число, которое хотите найти в массиве 1: "); // ищем элемент check в массиве a
             check = int.Parse(Console.ReadLine());
             if (aa > check) Console.WriteLine("Элемент {0} присутствует в массиве 1!", check);
@@ -51,7 +51,7 @@ namespace лаб4
 
             Console.WriteLine("--------------------------------------------------------------------------------------");
 
-int minus;
+           int minus;
             Console.WriteLine("Введите число, которое хотите вычесть от всех элементов массива 1: "); // вычитаем элемент minus из массива 1
             minus = int.Parse(Console.ReadLine());
             int[] gov = new int[n];
@@ -64,7 +64,7 @@ int minus;
 
             Console.WriteLine("--------------------------------------------------------------------------------------");
 
-Console.WriteLine("Объединяем массивы 1 и 2: "); // объединяем массивы 1 и 2
+            Console.WriteLine("Объединяем массивы 1 и 2: "); // объединяем массивы 1 и 2
             int[] gov2 = new int[n];
             gov2 = aa + bb;
             Console.WriteLine("Итоговый массив (1 + 2): ");
@@ -75,9 +75,16 @@ Console.WriteLine("Объединяем массивы 1 и 2: "); // объед
 
             Console.WriteLine("--------------------------------------------------------------------------------------");
 
+            string str = "Hello! It's me.";
+            Console.WriteLine("Количество пробелов в строке: " + str.HowManySpace());
+            Console.WriteLine("Увеличенная строка: " + str.Add());
 
+            Console.WriteLine("--------------------------------------------------------------------------------------");
 
-
+            int res, sum; int[] c = new int[n-5];
+            res = MaxMinusMin(aa);
+            sum = Summa(aa);
+            c = Delete5(aa);
         }
 
     }
@@ -126,7 +133,7 @@ Console.WriteLine("Объединяем массивы 1 и 2: "); // объед
                 return true;
         }
 
-public static bool operator ==(Massive a, Massive b) // проверка массива на равенство
+        public static bool operator ==(Massive a, Massive b) // проверка массива на равенство
         {
             bool result = a.arr.Equals(b.brr);
             if (result)
@@ -135,7 +142,7 @@ public static bool operator ==(Massive a, Massive b) // проверка мас�
                 return false;
         }
 
-public static bool operator >(Massive a, int check) // проверка на вхождение в массив
+        public static bool operator >(Massive a, int check) // проверка на вхождение в массив
         {
             int flag = 0;
             for (int i = 0; i < a.arr.Length; i++)
@@ -162,7 +169,7 @@ public static bool operator >(Massive a, int check) // проверка на в�
             return arr1;
         }
 
-public static int[] operator +(Massive a, Massive b) // объединение массивов
+        public static int[] operator +(Massive a, Massive b) // объединение массивов
         {
             int[] conc = new int[a.arr.Length + b.brr.Length];
             for (int i = 0; i < a.arr.Length; i++)
@@ -175,9 +182,10 @@ public static int[] operator +(Massive a, Massive b) // объединение �
             }
             return conc;
         }
+   
     }
 
-public class Owner
+    public class Owner
     {
         int id;
         string name;
@@ -212,8 +220,6 @@ public class Owner
         }
     }
 
-
-
     public static class StatisticOperation
     {
         public static int HowManySpace(this string str) // первый метод расширения для строки (удалить пробелы) 
@@ -227,7 +233,7 @@ public class Owner
             return a;
         }
 
-public static string Add(this string str) // второй метод расширения для строки (добавить что-то к строке)
+        public static string Add(this string str) // второй метод расширения для строки (добавить что-то к строке)
         {
             str = str + Console.ReadLine();
             return str;
@@ -239,7 +245,7 @@ public static string Add(this string str) // второй метод расши�
             return str;
         }
 
-      public static int MaxMinusMin(this Massive a) // первый метод расширения для массива (разность между максимальным и минимальным)
+        public static int MaxMinusMin(this Massive a) // первый метод расширения для массива (разность между максимальным и минимальным)
         {
             int maxnum = -99999;
             for (int i = 0; i < a.arr.Length; i++)
@@ -262,7 +268,6 @@ public static string Add(this string str) // второй метод расши�
             return res;
         }
 
-
         public static int Summa(this Massive a) // второй метод расширения для массива (сумма элементов)
         {
             int sum = 0;
@@ -281,7 +286,7 @@ public static string Add(this string str) // второй метод расши�
             temp1.RemoveAt(c);
             a.arr = temp1.ToArray();
 
-List<int> temp2 = a.arr.ToList();
+            List<int> temp2 = a.arr.ToList();
             temp2.RemoveAt(c);
             a.arr = temp2.ToArray();
 
@@ -297,8 +302,6 @@ List<int> temp2 = a.arr.ToList();
             temp5.RemoveAt(c);
             a.arr = temp5.ToArray();
 
-
-            
             return a.arr;
         }
     }

@@ -51,6 +51,19 @@ namespace лаб4
 
             Console.WriteLine("--------------------------------------------------------------------------------------");
 
+int minus;
+            Console.WriteLine("Введите число, которое хотите вычесть от всех элементов массива 1: "); // вычитаем элемент minus из массива 1
+            minus = int.Parse(Console.ReadLine());
+            int[] gov = new int[n];
+            gov = aa - minus;
+            Console.WriteLine("Итоговый массив 1: ");
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine("{0} ", gov[i]);
+            }
+
+            Console.WriteLine("--------------------------------------------------------------------------------------");
+
 
 
         }
@@ -110,6 +123,33 @@ public static bool operator ==(Massive a, Massive b) // проверка мас�
                 return false;
         }
 
+public static bool operator >(Massive a, int check) // проверка на вхождение в массив
+        {
+            int flag = 0;
+            for (int i = 0; i < a.arr.Length; i++)
+            {
+                if (a.arr[i] == check)
+                    flag++;
+            }
+            if (flag != 0) return true;
+            else return false;
+        }
+
+        public static bool operator <(Massive a, int check)
+        {
+            return false;
+        }
+
+        public static int[] operator -(Massive a, int minus) // разность по скаляру
+        {
+            int[] arr1 = a.arr;
+            for (int i = 0; i < arr1.Length; i++)
+            {
+                arr1[i] = arr1[i] - minus;
+            }
+            return arr1;
+        }
+
     }
 
 public class Owner
@@ -162,6 +202,18 @@ public class Owner
             return a;
         }
 
+public static string Add(this string str) // второй метод расширения для строки (добавить что-то к строке)
+        {
+            str = str + Console.ReadLine();
+            return str;
+        }
+
+        public static string DeleteLetters(this string str) // третий метод расширения для строки (удалить гласные)
+        {
+            str = Regex.Replace(str, "EUIOAeuioa", "");
+            return str;
+        }
+
       
 
 
@@ -182,6 +234,23 @@ public class Owner
             List<int> temp1 = a.arr.ToList(); // пять раз удаляем нулевой элемент
             temp1.RemoveAt(c);
             a.arr = temp1.ToArray();
+
+List<int> temp2 = a.arr.ToList();
+            temp2.RemoveAt(c);
+            a.arr = temp2.ToArray();
+
+            List<int> temp3 = a.arr.ToList();
+            temp3.RemoveAt(c);
+            a.arr = temp3.ToArray();
+
+            List<int> temp4 = a.arr.ToList();
+            temp4.RemoveAt(c);
+            a.arr = temp4.ToArray();
+
+            List<int> temp5 = a.arr.ToList();
+            temp5.RemoveAt(c);
+            a.arr = temp5.ToArray();
+
 
             
             return a.arr;

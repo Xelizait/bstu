@@ -64,6 +64,18 @@ int minus;
 
             Console.WriteLine("--------------------------------------------------------------------------------------");
 
+Console.WriteLine("Объединяем массивы 1 и 2: "); // объединяем массивы 1 и 2
+            int[] gov2 = new int[n];
+            gov2 = aa + bb;
+            Console.WriteLine("Итоговый массив (1 + 2): ");
+            for (int i = 0; i < gov2.Length; i++)
+            {
+                Console.WriteLine("{0} ", gov2[i]);
+            }
+
+            Console.WriteLine("--------------------------------------------------------------------------------------");
+
+
 
 
         }
@@ -150,6 +162,19 @@ public static bool operator >(Massive a, int check) // проверка на в�
             return arr1;
         }
 
+public static int[] operator +(Massive a, Massive b) // объединение массивов
+        {
+            int[] conc = new int[a.arr.Length + b.brr.Length];
+            for (int i = 0; i < a.arr.Length; i++)
+            {
+                conc[i] = a.arr[i];
+            }
+            for (int i = a.arr.Length, ii = 0; i < a.arr.Length + b.brr.Length; ii++, i++)
+            {
+                conc[i] = b.arr[ii];
+            }
+            return conc;
+        }
     }
 
 public class Owner

@@ -43,6 +43,15 @@ namespace лаб4
 
             Console.WriteLine("--------------------------------------------------------------------------------------");
 
+ int check;
+            Console.WriteLine("Введите число, которое хотите найти в массиве 1: "); // ищем элемент check в массиве a
+            check = int.Parse(Console.ReadLine());
+            if (aa > check) Console.WriteLine("Элемент {0} присутствует в массиве 1!", check);
+            else Console.WriteLine("Элемент {0} не существует в массиве 1!", check);
+
+            Console.WriteLine("--------------------------------------------------------------------------------------");
+
+
 
         }
 
@@ -92,6 +101,50 @@ namespace лаб4
                 return true;
         }
 
+public static bool operator ==(Massive a, Massive b) // проверка массива на равенство
+        {
+            bool result = a.arr.Equals(b.brr);
+            if (result)
+                return true;
+            else
+                return false;
+        }
+
+    }
+
+public class Owner
+    {
+        int id;
+        string name;
+        string org;
+
+        public Owner(int id, string name, string org)
+        {
+            this.id = id;
+            this.name = name;
+            this.org = org;
+        }
+
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+        public string Org
+        {
+            get { return org; }
+            set { org = value; }
+        }
+
+        public void getInfo()
+        {
+            Console.WriteLine("ID:{0}\nИмя:{1}\nОрганизация:{2}", Id, Name, Org);
+        }
     }
 
 

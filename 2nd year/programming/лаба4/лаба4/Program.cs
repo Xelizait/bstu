@@ -239,7 +239,28 @@ public static string Add(this string str) // второй метод расши�
             return str;
         }
 
-      
+      public static int MaxMinusMin(this Massive a) // первый метод расширения для массива (разность между максимальным и минимальным)
+        {
+            int maxnum = -99999;
+            for (int i = 0; i < a.arr.Length; i++)
+            {
+                if (a.arr[i] > maxnum)
+                {
+                    maxnum = a.arr[i];
+                };
+            }
+            int minnum = 99999;
+            for (int i = 0; i < a.arr.Length; i++)
+            {
+                if (a.arr[i] < minnum)
+                {
+                    minnum = a.arr[i];
+                };
+            }
+            int res;
+            res = maxnum - minnum;
+            return res;
+        }
 
 
         public static int Summa(this Massive a) // второй метод расширения для массива (сумма элементов)

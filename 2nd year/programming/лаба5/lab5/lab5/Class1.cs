@@ -240,6 +240,13 @@ sealed public class Button : Rectangle
 
     }
 
+public class Printer
+    {
+        public void IAmPrinting(Figure figure)
+        {
+            Console.WriteLine(figure.ToString());
+        }
+    }
 
 
 

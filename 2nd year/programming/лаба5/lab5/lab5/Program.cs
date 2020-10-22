@@ -19,10 +19,13 @@ namespace lab5
             radiobutton1.Clone();                   // вызов метода у класса
             ((Ialive)radiobutton1).Clone();         // вызов метода у интерфейса
 
-  
-
-
-
+Console.WriteLine("Эллипс является эллипсом: " + (ellipse1 is Ellipse));
+            Console.WriteLine("Эллипс является чекбоксом: " + (ellipse1 is Checkbox));
+            Console.WriteLine("Чекбокс является эллипсом: " + (checkbox1 is Ellipse));
+            Console.WriteLine("Радиокнопка является прямоугольником: " + (radiobutton1 is Rectangle));
+            Console.WriteLine("Радиокнопка является эллипсом: " + (radiobutton1 is Ellipse));
+            Console.WriteLine("Прямоугольник является радиокнопкой: " + (rectangle1 is Rectangle));
+            Console.WriteLine("Эллипс является фигурой: " + (ellipse1 is Figure));
 
 
             Console.WriteLine(checkbox1.ToString());

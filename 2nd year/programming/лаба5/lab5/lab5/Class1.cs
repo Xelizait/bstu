@@ -70,9 +70,6 @@ interface Iactionable
         public abstract void Move();
         public abstract void Clone();
     }
-    
-
-
 
 
     public class Ellipse : Figure, Ialive
@@ -154,6 +151,54 @@ interface Iactionable
             Console.WriteLine("Вставка фигуры!");
         }     
 
+    }
+
+sealed public class Button : Rectangle
+    {
+        public bool PushedOrNot;
+        public Button(string name, int id, int height, string color, int width, bool PushedOrNot) : base(name, id, height, color, width)
+        {
+            this.PushedOrNot = PushedOrNot;
+        }
+        public bool ToCheck()
+        {
+            if (PushedOrNot)
+                return true;
+            else
+                return false;
+        }
+    }
+
+    sealed public class Checkbox : Rectangle
+    {
+        public bool PushedOrNot;
+        public Checkbox(string name, int id, int height, string color, int width, bool PushedOrNot) : base(name, id, height, color, width)
+        {
+            this.PushedOrNot = PushedOrNot;
+        }
+        public bool ToCheck()
+        {
+            if (PushedOrNot)
+                return true;
+            else
+                return false;
+        }
+    }
+
+    sealed public class Radiobutton : Ellipse
+    {
+        public bool PushedOrNot;
+        public Radiobutton(string name, int id, int height, string color, bool PushedOrNot) : base(name, id, height, color)
+        {
+            this.PushedOrNot = PushedOrNot;
+        }
+        public bool ToCheck()
+        {
+            if (PushedOrNot)
+                return true;
+            else
+                return false;
+        }
     }
 
 

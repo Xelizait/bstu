@@ -6,6 +6,70 @@ using System.Threading.Tasks;
 
 namespace lab5
 {
+
+interface Iactionable
+    {
+        void Resize();
+        void Show();
+        void Input();
+        void Move();
+    }
+
+    interface Ialive
+    {
+        void Clone();
+    }
+
+    public abstract class Figure : Iactionable
+    {
+        protected string figurename;
+        protected int width;
+        protected int heigth;
+        protected string color;
+        protected int id;
+
+        public string Figurename
+        {
+            get { return figurename; }
+            set { figurename = value; }
+        }
+        public int Width
+        {
+            get { return width; }
+            set { width = value; }
+        }
+        public int Heigth
+        {
+            get { return heigth; }
+            set { heigth = value; }
+        }
+        public string Color
+        {
+            get { return color; }
+            set { color = value; }
+        }
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+
+        public override string ToString() // переопределение ToString с выводом информации
+        {
+            Console.WriteLine("Фигура: " + Figurename);
+            Console.WriteLine("Ширина: " + Width);
+            Console.WriteLine("Высота: " + Heigth);
+            Console.WriteLine("Цвет: " + Color);
+            Console.WriteLine("ID: " + Id);
+            return " тип " + base.ToString();
+        }
+
+        public abstract void Resize(); // реализация методов
+        public abstract void Show();
+        public abstract void Input();
+        public abstract void Move();
+        public abstract void Clone();
+    }
     
 
 

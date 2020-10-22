@@ -218,7 +218,27 @@ sealed public class Button : Rectangle
 
     }
 
- 
+ public class forObject : Object // переопределение методов Object
+    {
+        public override bool Equals(object obj)
+        {
+            if (obj == null) return false;
+            if (this.GetType() != obj.GetType()) return false;
+            return true; 
+        }
+
+        public string Name { get; set; }
+        int sNumber;
+
+        public override int GetHashCode()
+        {
+            int hash = 269;
+            hash = string.IsNullOrEmpty(Name) ? 0 : Name.GetHashCode();
+            hash = (hash * 47) + sNumber.GetHashCode();
+            return hash;
+        }
+
+    }
 
 
 

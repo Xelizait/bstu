@@ -252,6 +252,96 @@ namespace lab5
     }
 
 
+    class Program
+    {
+        static void Main(string[] args)
+        {
 
+            Ellipse ellipse1 = new Ellipse("Продолговатый эллипс", 152415, 110, "Голубой");
+            ellipse1.FigureArea = 50;
+
+            Ellipse ellipse2 = new Ellipse("Сплюснутый эллипс", 965986, 70, "Фиолетовый");
+            ellipse2.FigureArea = 80;
+
+            Ellipse ellipse3 = new Ellipse("Маленький эллипс", 120120, 20, "Белый");
+            ellipse3.FigureArea = 25;
+
+
+
+            Radiobutton radiobutton1 = new Radiobutton("Радиокнопка большая", 456456, 150, "Серый", true);
+            radiobutton1.FigureArea = 90;
+
+            Radiobutton radiobutton2 = new Radiobutton("Радиокнопка средняя", 485485, 120, "Белый", true);
+            radiobutton2.FigureArea = 60;
+
+            Radiobutton radiobutton3 = new Radiobutton("Радиокнопка маленькая", 789456, 90, "Черный", false);
+            radiobutton1.FigureArea = 30;
+
+
+
+            Rectangle rectangle1 = new Rectangle("Огромный прямоугольник", 753756, 160, "Сиреневый", 125);
+            rectangle1.FigureArea = 130;
+
+            Rectangle rectangle2 = new Rectangle("Закругленный прямоугольник", 186123, 70, "Бирюзовый", 50);
+            rectangle2.FigureArea = 50;
+
+            Rectangle rectangle3 = new Rectangle("Перевернутый прямоугольник", 900102, 100, "Красный", 75);
+            rectangle1.FigureArea = 80;
+
+
+
+            Checkbox checkbox1 = new Checkbox("Дефолтный чекбокс", 152689, 30, "Белый", 30, false);
+            checkbox1.FigureArea = 40;
+
+            Checkbox checkbox2 = new Checkbox("Прямоугольный чекбокс", 196234, 40, "Черный", 30, true);
+            checkbox2.FigureArea = 45;
+
+            Checkbox checkbox3 = new Checkbox("Многоугольный чекбокс", 245900, 70, "Бежевый", 70, false);
+            checkbox3.FigureArea = 60;
+
+            StackOfFigures.Add(ellipse1);
+            StackOfFigures.Add(radiobutton1);
+            StackOfFigures.Add(rectangle1);
+            StackOfFigures.Add(checkbox1);
+
+            StackOfFigures.Add(ellipse2);
+            StackOfFigures.Add(radiobutton2);
+            StackOfFigures.Add(rectangle2);
+            StackOfFigures.Add(checkbox2);
+
+            StackOfFigures.Add(ellipse3);
+            StackOfFigures.Add(radiobutton3);
+            StackOfFigures.Add(rectangle3);
+            StackOfFigures.Add(checkbox3);
+
+
+            Console.WriteLine("--------------------------------------------------------------------");
+            Console.WriteLine("ВСЕ ФИГУРЫ И КНОПКИ: ");
+            StackOfFigures.ShowList();
+            Console.WriteLine("--------------------------------------------------------------------");
+            Console.WriteLine();
+
+            int totalarea = Controller.FindTotal(StackOfFigures.AllFigures);
+            Console.WriteLine("--------------------------------------------------------------------");
+            Console.WriteLine("Сумма всех площадей: {0}", totalarea);
+            Console.WriteLine("--------------------------------------------------------------------");
+            Console.WriteLine();
+
+            Console.WriteLine("--------------------------------------------------------------------");
+            int indexOfBiggest = Controller.FindTheBiggest(StackOfFigures.AllFigures);
+            Console.WriteLine("Самая большая фигура: {0}. Ее площадь: {1}.", StackOfFigures.AllFigures[indexOfBiggest].Figurename, StackOfFigures.AllFigures[indexOfBiggest].FigureArea);
+            Console.WriteLine("--------------------------------------------------------------------");
+            Console.WriteLine();
+
+            Console.WriteLine("--------------------------------------------------------------------");
+            Controller.SortByArea(StackOfFigures.AllFigures);
+            Console.WriteLine("Отсортированные по площади фигуры:");
+            StackOfFigures.ShowList();
+            Console.WriteLine("---------------------------------------------------------------------");
+            Console.WriteLine();
+
+            Console.ReadKey();
+        }       
+        }
     }
 

@@ -1,0 +1,21 @@
+d:\Учёба\2 курс\ООП\лаба6\lan6\lan6\bin\Debug\lan6.exe.config
+d:\Учёба\2 курс\ООП\лаба6\lan6\lan6\bin\Debug\lan6.exe
+d:\Учёба\2 курс\ООП\лаба6\lan6\lan6\bin\Debug\lan6.pdb
+d:\Учёба\2 курс\ООП\лаба6\lan6\lan6\obj\Debug\lan6.csprojAssemblyReference.cache
+d:\Учёба\2 курс\ООП\лаба6\lan6\lan6\obj\Debug\lan6.csproj.CoreCompileInputs.cache
+d:\Учёба\2 курс\ООП\лаба6\lan6\lan6\obj\Debug\lan6.exe
+d:\Учёба\2 курс\ООП\лаба6\lan6\lan6\obj\Debug\lan6.pdb
+d:\Учёба\2 курс\ООП\лаба7\lan6\lan6\obj\Debug\lan6.csprojAssemblyReference.cache
+d:\Учёба\2 курс\ООП\лаба7\lan6\lan6\obj\Debug\lan6.csproj.CoreCompileInputs.cache
+d:\Учёба\2 курс\ООП\лаба7\lan6\lan6\obj\Debug\lan6.exe
+d:\Учёба\2 курс\ООП\лаба7\lan6\lan6\obj\Debug\lan6.pdb
+d:\Учёба\2 курс\ООП\лаба7\lan6\lan6\bin\Debug\lan6.exe.config
+d:\Учёба\2 курс\ООП\лаба7\lan6\lan6\bin\Debug\lan6.exe
+d:\Учёба\2 курс\ООП\лаба7\lan6\lan6\bin\Debug\lan6.pdb
+C:\Users\Денис\Desktop\lan6\lan6\bin\Debug\lan6.exe.config
+C:\Users\Денис\Desktop\lan6\lan6\bin\Debug\lan6.exe
+C:\Users\Денис\Desktop\lan6\lan6\bin\Debug\lan6.pdb
+C:\Users\Денис\Desktop\lan6\lan6\obj\Debug\lan6.csprojAssemblyReference.cache
+C:\Users\Денис\Desktop\lan6\lan6\obj\Debug\lan6.csproj.CoreCompileInputs.cache
+C:\Users\Денис\Desktop\lan6\lan6\obj\Debug\lan6.exe
+C:\Users\Денис\Desktop\lan6\lan6\obj\Debug\lan6.pdb
